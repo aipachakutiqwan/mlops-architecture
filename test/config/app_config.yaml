@@ -1,6 +1,0 @@
-app_version: '0.0.1'
-app_name: 'mlops-architecture'
-api_prefix: '/api'
-is_debug: false
-log_filename: 'logs/mlops-architecture.log'
-work_dir: './'

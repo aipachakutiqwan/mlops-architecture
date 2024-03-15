@@ -10,7 +10,8 @@ def test_is_alive():
         url="http://localhost:8080/api/heartbeat/heartbeat",
         auth=HTTPBasicAuth('test', 'test')
     )
-    print(f'response.status_code: {response.status_code}')
+    print(f'response: {response.text}')
+    print(f'status_code: {response.status_code}')
     assert response.status_code == 200
 
 

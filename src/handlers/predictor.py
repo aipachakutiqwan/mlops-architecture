@@ -1,3 +1,6 @@
+'''
+Predictor class manages the endpoint preprocessing, inference and postprocessing of the models.
+'''
 import os
 import sys
 import time
