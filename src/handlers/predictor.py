@@ -19,8 +19,8 @@ class Predictor:
     def __init__(self, app_config) -> None:
         logging.info("Initializing predictor class")
         self.model_delivery_duration  = xgb.XGBRegressor()
-        self.model_delivery_duration.load_model(os.getenv('MODEL_DELIVERY_DURATION', 'models/delivery_duration/v1/model_delivery_duration.json'))
-        self.scaler_delivery_duration = load(os.getenv('SCALER_DELIVERY_DURATION', 'models/delivery_duration/v1/scaler_delivery_duration.bin'))
+        self.model_delivery_duration.load_model(os.getenv('MODEL_DELIVERY_DURATION'))
+        self.scaler_delivery_duration = load(os.getenv('SCALER_DELIVERY_DURATION'))
         logging.info("Loaded delivery duration forecasting model")
 
     def predict_delivery_duration(self, sample_delivery_duration: DeliveryDuration):

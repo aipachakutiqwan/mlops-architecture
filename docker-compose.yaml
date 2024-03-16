@@ -3,3 +3,9 @@ services:
     build: .
     ports:
       - "8080:8080"
+    volumes:
+      - ./models:/home/python/agent/models
+    environment:
+      - MODEL_DELIVERY_DURATION=models/delivery_duration/v1/model_delivery_duration.json
+      - SCALER_DELIVERY_DURATION=models/delivery_duration/v1/scaler_delivery_duration.bin
+

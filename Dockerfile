@@ -14,13 +14,9 @@ RUN touch /home/${USERNAME}/agent/logs/${PACKAGE_NAME}.log
 # Add files
 ADD config /home/${USERNAME}/agent/config
 ADD src /home/${USERNAME}/agent/src
-ADD models /home/${USERNAME}/agent/models
 ADD pyproject.toml /home/${USERNAME}/agent/pyproject.toml
-#ADD requirements.txt /home/${USERNAME}/agent/requirements.txt
-
 
 # Install packages
-#RUN pip install -r /home/${USERNAME}/agent/requirements.txt
 RUN pip install .
 
 ENV PYTHONPATH "${PYTHONPATH}:/home/${USERNAME}/agent:/home/${USERNAME}/agent/src"
